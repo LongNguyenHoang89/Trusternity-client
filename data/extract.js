@@ -24,6 +24,10 @@ function runQueue(resultFileName) {
     var header = 'num, diff, time\n';
     fs.writeFileSync(resultFileName + '.csv', header);
 
+    var count = 0;
+    var resultInBatch = "";
+
+
     var currentBlockNum = 2000000;
     for (var i = 0; i < currentBlockNum; i++) {
         queue.push(i, function (block) {            
@@ -31,7 +35,13 @@ function runQueue(resultFileName) {
                 + "," + block.difficulty
                 + "," + block.timestamp
                 + "\n";
-            fs.appendFileSync(resultFileName + '.csv', line);
+
+            resultInBatch += line;                         
+            if (count++ % 1000 == 0){                
+                console.log(count);
+                fs.appendFileSync(resultFileName + '.csv', resultInBatch);
+                resultInBatch = "";                
+            }
         });
     }
 }
