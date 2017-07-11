@@ -21,7 +21,7 @@ var Parse = function (data, fileName) {
     var correctJson = data.replace(/(['"])?([a-z0-9A-Z_]+)(['"])?:/g, '"$2": ');
     var jsonArray = JSON.parse(correctJson);
 
-    var header = 'num, diff, time, interval, avg\n';
+    var header = 'num, diff, time, interval, avg, miner\n';
     fs.writeFileSync(fileName + '.csv', header);
     var prev = 0;
     var prev10 = [];
@@ -51,6 +51,7 @@ var Parse = function (data, fileName) {
             + "," + block.timestamp
             + "," + timeDifferent
             + "," + avg
+            + "," + block.miner
             + "\n";
         fs.appendFileSync(fileName + '.csv', line);
 
