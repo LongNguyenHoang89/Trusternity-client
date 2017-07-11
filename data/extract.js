@@ -10,40 +10,29 @@ var async = require('async');
 
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-function extractData(id, callback) {
-    var block = web3.eth.getBlock(id);    
-    callback(block);
-}
-
-function runQueue(resultFileName) {
-    var queue = async.queue(extractData, 10); // Run 10 concurrent extract    
-    queue.drain = function () {
-        console.log('job finished');
-    }
-
+function makeFileHeader(resultFileName){
     var header = 'num, diff, time\n';
     fs.writeFileSync(resultFileName + '.csv', header);
-
-    var count = 0;
-    var resultInBatch = "";
-
-
-    var currentBlockNum = 2000000;
-    for (var i = 0; i < currentBlockNum; i++) {
-        queue.push(i, function (block) {            
-            var line = block.number
-                + "," + block.difficulty
-                + "," + block.timestamp
-                + "\n";
-
-            resultInBatch += line;                         
-            if (count++ % 1000 == 0){                
-                console.log(count);
-                fs.appendFileSync(resultFileName + '.csv', resultInBatch);
-                resultInBatch = "";                
-            }
-        });
-    }
 }
 
+function runQueue(resultFileName) {        
+    var resultInBatch = "";            
+
+    var start = process.argv[2];
+    var end = process.argv[3];
+    console.log("Extract data from block " + start + " to " + end);
+
+    for (var i = start; i < end; i++) {
+        block = web3.eth.getBlock(i);
+        var line = block.number
+            + "," + block.difficulty
+            + "," + block.timestamp
+            + "\n";
+        resultInBatch += line;                            
+    }
+
+    fs.appendFileSync(resultFileName + '.csv', resultInBatch);
+}
+
+//makeFileHeader('test');
 runQueue('test');
