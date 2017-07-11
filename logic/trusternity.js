@@ -1,7 +1,7 @@
 var ipc = require('electron').ipcMain;
 var http = require('http');
 var WebSocket = require('ws');
-const {webContents} = require('electron')
+const { webContents } = require('electron')
 
 //websocket to local CONIKS client
 var wsURL = 'ws://localhost:3001/ws';
@@ -21,7 +21,7 @@ var SetupIpc = function (window) {
     browserWindow = window;
 }
 
-var log = function(message){    
+var log = function (message) {
     browserWindow.webContents.send('log', message);
 }
 
@@ -69,10 +69,10 @@ var generateKey = function (event) {
 var register = function (event, email, key) {
     var command = 'register ' + email + ' ' + key;
     log(command);
-    ws.send(command);  
+    ws.send(command);
 }
 
-ws.on('open', function () { 
+ws.on('open', function () {
     log('Connected to CONIKS client at ' + wsURL);
 });
 

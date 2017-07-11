@@ -1,24 +1,16 @@
-var initchart = function () {
-    var data = [{
-        "sale": "202",
-        "year": "2000"
-    }, {
-        "sale": "215",
-        "year": "2001"
-    }, {
-        "sale": "179",
-        "year": "2002"
-    }, {
-        "sale": "199",
-        "year": "2003"
-    }, {
-        "sale": "134",
-        "year": "2004"
-    }, {
-        "sale": "176",
-        "year": "2010"
-    }];
+var loaddata = function () {
+    var load = d3.csv("data/blocks_info_40-1.json.csv", function (data) {
+        data.forEach(function (d) {
+            d.num = +d.num;
+            d.diff = +d.diff;
+            d.time = +d.time;
+        });
+        console.log(data);
+        initchart(data);
+    });
+};
 
+var initchart = function (data) {
     var vis = d3.select("#visualisation"),
         WIDTH = 600,
         HEIGHT = 400,
@@ -28,8 +20,8 @@ var initchart = function () {
             bottom: 20,
             left: 50
         },
-        xScale = d3.scaleLinear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([2000, 2010]),
-        yScale = d3.scaleLinear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0, 215]),
+        xScale = d3.scaleLinear().range([MARGINS.left, WIDTH - MARGINS.right]),
+        yScale = d3.scaleLinear().range([HEIGHT - MARGINS.top, MARGINS.bottom]),
         xAxis = d3.axisBottom(xScale),
         yAxis = d3.axisLeft(yScale);
     vis.append("svg:g")
@@ -43,10 +35,10 @@ var initchart = function () {
 
     var lineGen = d3.line()
         .x(function (d) {
-            return xScale(d.year);
+            return xScale(d.num);
         })
         .y(function (d) {
-            return yScale(d.sale);
+            return yScale(d.time);
         });
     vis.append('svg:path')
         .attr('d', lineGen(data))
@@ -55,4 +47,4 @@ var initchart = function () {
         .attr('fill', 'none');
 }
 
-initchart();
+loaddata();
