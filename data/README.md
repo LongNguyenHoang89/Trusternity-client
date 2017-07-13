@@ -36,7 +36,24 @@ Number of the last mined block after the first step of the experiment :
 
 * 40 then 1
   1. block #238
+  2. block #234
+* 40 then 2
+  2. block #244
+* 40 then 3
+  2. block #232
 * 40 then 4
   1. block #253
+  2. block #232
+* 40 then 5
+  2. block #253
+* 40 then 6
+  2. block #226
+* 40 then 7
+  2. block #252
+* 40 then 8
+  2. block #218
+* 40 then 9
+  2. block #265
 * 40 then 10
   1. block #245
+  2. block #245
