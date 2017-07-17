@@ -29,49 +29,29 @@ The statistics of 40 ethereum nodes mining (CPU Mining) are the following :
 
 ### Results
 
-The experiment have been executed several times, the results are in the folders "1", "2", ...
+The experiment has been executed several times, the results are in the folders "1", "2", ...
 The first time the difficulty was a little undervalued (it was set to 27Mh, now it is 28MH).
 
-Number of the last mined block after the first step of the experiment :
+The number of the last mined block after the first step of the experiment (i.e after 1 hr) :
 
-* 40 then 1
-  1. block #238
-  2. block #234
-* 40 then 2
-  2. block #244
-* 40 then 3
-  2. block #232
-* 40 then 4
-  1. block #253
-  2. block #232
-* 40 then 5
-  2. block #253
-* 40 then 6
-  2. block #226
-* 40 then 7
-  2. block #252
-* 40 then 8
-  2. block #218
-* 40 then 9
-  2. block #265
-* 40 then 10
-  1. block #245
-  2. block #245
-* 40 then 11
-  2. block #230
-* 40 then 12
-  2. block #251
-* 40 then 13
-  2. block #245
-* 40 then 14
-  2. block #227
-* 40 then 15
-  2. block #218
-* 40 then 16
-  2. block #239
-* 40 then 17
-  2. block #223
-* 40 then 18
-  2. block #253
-* 40 then 19
-  2. block #251
+| Number of mining nodes | Experiment 1 | Experiment 2 | Experiment 3 |
+|:----------------------:|-------------:|-------------:|-------------:|
+|       40 then 1        |          238 |          234 |          219 |
+|       40 then 2        |            ● |          244 |            ● |
+|       40 then 3        |            ● |          232 |            ● |
+|       40 then 4        |          253 |          232 |          243 |
+|       40 then 5        |            ● |          253 |            ● |
+|       40 then 6        |            ● |          226 |            ● |
+|       40 then 7        |            ● |          252 |            ● |
+|       40 then 8        |            ● |          218 |            ● |
+|       40 then 9        |            ● |          265 |            ● |
+|       40 then 10       |          245 |          245 |          223 |
+|       40 then 11       |            ● |          230 |            ● |
+|       40 then 12       |            ● |          251 |            ● |
+|       40 then 13       |            ● |          245 |            ● |
+|       40 then 14       |            ● |          227 |            ● |
+|       40 then 15       |            ● |          218 |            ● |
+|       40 then 16       |            ● |          239 |            ● |
+|       40 then 17       |            ● |          223 |            ● |
+|       40 then 18       |            ● |          253 |            ● |
+|       40 then 19       |            ● |          251 |            ● |
