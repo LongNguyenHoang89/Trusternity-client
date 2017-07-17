@@ -30,9 +30,9 @@ The statistics of 40 ethereum nodes mining (CPU Mining) are the following :
 ### Results
 
 The experiment has been executed several times, the results are in the folders "1", "2", ...
-The first time the difficulty was a little undervalued (it was set to 27Mh, now it is 28MH).
+The difficulty for the first experiment was set to 27MH. We notice that it was a little undervalued, so it has been set to 28MH for the next experiments.
 
-The number of the last mined block after the first step of the experiment (i.e after 1 hr) :
+The following table presents the numbers of the last mined block after the first step of the experiment (i.e after 1 hr)
 
 | Number of mining nodes | Experiment 1 | Experiment 2 | Experiment 3 |
 |:----------------------:|-------------:|-------------:|-------------:|
