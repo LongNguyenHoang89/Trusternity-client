@@ -73,3 +73,5 @@ Number of the last mined block after the first step of the experiment :
   2. block #223
 * 40 then 18
   2. block #253
+* 40 then 19
+  2. block #251
