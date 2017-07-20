@@ -2,13 +2,11 @@
 
 ### Overview
 
-Deployment of a private network of 40 ethereum nodes (full) and 1 bootnode and we ran 3 experiments :
-* 40 nodes mined for 1h. After that, 10 nodes mined for one additional hour.
-* 40 nodes mined for 1h. After that, 4 nodes mined for one additional hour.
-* 40 nodes mined for 1h. After that, 1 node mined for one additional hour.
-
-
+Deployment of a private network of 40 ethereum nodes (full) and 1 bootnode. The 40 nodes mined for 1h, then some of them are switched off and the remaining ones continued to mine for 1 additional hour.
 At the end, we retrieved the information of all the mined blocks.
+
+One experiment consists of running this process 19 times : 40 nodes then [1..19] nodes.
+
 
 ### Hardware
 
@@ -23,21 +21,37 @@ Deployment of one lxc image built with Ansible (configuration manager) on each v
 
 ### Ethereum network
 
-40 ethereum nodes mining (CPU Mining) :
+The statistics of 40 ethereum nodes mining (CPU Mining) are the following :
 
-* Average network hashrate : ~ 2.2MH/s
-* Difficulty : ~ 27MH - 27.5MH
-* Average block time : ~ 13s - 14s
+* Average network hashrate : ~ 2MH/s - 2.3MH/s
+* Difficulty : ~ 27.5MH - 28.7MH
+* Average block time : ~ 12.5s - 13.5s
 
 ### Results
 
-1. 40 then 10
-  - "Switching" block : 245
-  - Blocks info : see the file "blocks_info_40-10.json"
-2. 40 then 4
-  - "Switching" block : 253
-  - Blocks info : see the file "blocks_info_40-4.json"
-3. 40 then 1
-  - "Switching" block : 238
-  - Blocks info : see the file "blocks_info_40-1.json"
+The experiment has been executed several times, the results are in the folders "1", "2", ...
+The difficulty for the first experiment was set to 27MH. We notice that it was a little undervalued, so it has been set to 28MH for the next experiments.
 
+The following table presents the numbers of the last mined block after the first step of the experiment (i.e after 1 hr)
+
+| Number of mining nodes | Experiment 1 | Experiment 2 | Experiment 3 | Experiment 4 |
+|:----------------------:|-------------:|-------------:|-------------:|-------------:|
+|       40 then 1        |          238 |          234 |          219 |          236 |
+|       40 then 2        |            ● |          244 |            ● |            ● |
+|       40 then 3        |            ● |          232 |            ● |            ● |
+|       40 then 4        |          253 |          232 |          243 |          222 |
+|       40 then 5        |            ● |          253 |            ● |            ● |
+|       40 then 6        |            ● |          226 |            ● |            ● |
+|       40 then 7        |            ● |          252 |            ● |            ● |
+|       40 then 8        |            ● |          218 |            ● |            ● |
+|       40 then 9        |            ● |          265 |            ● |            ● |
+|       40 then 10       |          245 |          245 |          223 |          262 |
+|       40 then 11       |            ● |          230 |            ● |            ● |
+|       40 then 12       |            ● |          251 |            ● |            ● |
+|       40 then 13       |            ● |          245 |            ● |            ● |
+|       40 then 14       |            ● |          227 |            ● |            ● |
+|       40 then 16       |            ● |          239 |            ● |            ● |
+|       40 then 17       |            ● |          223 |            ● |            ● |
+|       40 then 15       |            ● |          218 |            ● |            ● |
+|       40 then 18       |            ● |          253 |            ● |            ● |
+|       40 then 19       |            ● |          251 |            ● |            ● |
