@@ -53,5 +53,5 @@ The following table presents the numbers of the last mined block after the first
 |       40 then 15       |     ● |   218 |     ● |     ● |     ● |                     |   209 |
 |       40 then 16       |     ● |   239 |     ● |     ● |     ● |                     |       |
 |       40 then 17       |     ● |   223 |     ● |     ● |     ● |                     |       |
-|       40 then 18       |     ● |   253 |     ● |     ● |     ● |                     |       |
-|       40 then 19       |     ● |   251 |     ● |     ● |     ● |                     |       |
+|       40 then 18       |     ● |   253 |     ● |     ● |     ● |                     |   248 |
+|       40 then 19       |     ● |   251 |     ● |     ● |     ● |                     |   238 |
