@@ -32,26 +32,28 @@ The statistics of 40 ethereum nodes mining (CPU Mining) are the following :
 The experiment has been executed several times, the results are in the folders "1", "2", ...
 The difficulty for the first experiment was set to 27MH. We notice that it was a little undervalued, so it has been set to 28MH for the next experiments.
 
-The following table presents the numbers of the last mined block after the first step of the experiment (i.e after 1 hr)
+The following table presents the numbers of the last mined block after the first step of the experiment (i.e after 1 hr or after 30 for the sixth experiment)
+(These information are also present in a file named transition_block_number.csv in every results directory)
 
-| Number of mining nodes | Experiment 1 | Experiment 2 | Experiment 3 | Experiment 4 |
-|:----------------------:|-------------:|-------------:|-------------:|-------------:|
-|       40 then 1        |          238 |          234 |          219 |          236 |
-|       40 then 2        |            ● |          244 |            ● |            ● |
-|       40 then 3        |            ● |          232 |            ● |            ● |
-|       40 then 4        |          253 |          232 |          243 |          222 |
-|       40 then 5        |            ● |          253 |            ● |            ● |
-|       40 then 6        |            ● |          226 |            ● |            ● |
-|       40 then 7        |            ● |          252 |            ● |            ● |
-|       40 then 8        |            ● |          218 |            ● |            ● |
-|       40 then 9        |            ● |          265 |            ● |            ● |
-|       40 then 10       |          245 |          245 |          223 |          262 |
-|       40 then 11       |            ● |          230 |            ● |            ● |
-|       40 then 12       |            ● |          251 |            ● |            ● |
-|       40 then 13       |            ● |          245 |            ● |            ● |
-|       40 then 14       |            ● |          227 |            ● |            ● |
-|       40 then 16       |            ● |          239 |            ● |            ● |
-|       40 then 17       |            ● |          223 |            ● |            ● |
-|       40 then 15       |            ● |          218 |            ● |            ● |
-|       40 then 18       |            ● |          253 |            ● |            ● |
-|       40 then 19       |            ● |          251 |            ● |            ● |
+
+| Number of mining nodes | Exp 1 | Exp 2 | Exp 3 | Exp 4 | Exp 5 | Exp 6 (2*30min) | Exp 7 | Exp 8 | Exp 9 | Exp 10 |
+|:----------------------:|------:|------:|------:|------:|------:|----------------:|------:|------:|------:|-------:|
+|       40 then 1        |   238 |   234 |   219 |   236 |   250 |               ● |     ● |     ● |     ● |      ● |
+|       40 then 2        |     ● |   244 |     ● |     ● |     ● |             113 |     ● |     ● |     ● |      ● |
+|       40 then 3        |     ● |   232 |     ● |     ● |     ● |             115 |     ● |     ● |     ● |      ● |
+|       40 then 4        |   253 |   232 |   243 |   222 |   246 |               ● |     ● |     ● |     ● |      ● |
+|       40 then 5        |     ● |   253 |     ● |     ● |     ● |               ● |     ● |     ● |   234 |    245 |
+|       40 then 6        |     ● |   226 |     ● |     ● |     ● |               ● |     ● |     ● |   230 |    223 |
+|       40 then 7        |     ● |   252 |     ● |     ● |     ● |               ● |     ● |     ● |   232 |    242 |
+|       40 then 8        |     ● |   218 |     ● |     ● |     ● |               ● |     ● |     ● |   235 |    217 |
+|       40 then 9        |     ● |   265 |     ● |     ● |     ● |               ● |   232 |   227 |     ● |      ● |
+|       40 then 10       |   245 |   245 |   223 |   262 |   226 |               ● |     ● |     ● |     ● |      ● |
+|       40 then 11       |     ● |   230 |     ● |     ● |     ● |               ● |     ● |     ● |   246 |    203 |
+|       40 then 12       |     ● |   251 |     ● |     ● |     ● |               ● |     ● |     ● |   231 |    218 |
+|       40 then 13       |     ● |   245 |     ● |     ● |     ● |               ● |     ● |     ● |   229 |    244 |
+|       40 then 14       |     ● |   227 |     ● |     ● |     ● |               ● |     ● |     ● |   262 |    222 |
+|       40 then 15       |     ● |   218 |     ● |     ● |     ● |               ● |   209 |   245 |     ● |      ● |
+|       40 then 16       |     ● |   239 |     ● |     ● |     ● |               ● |     ● |     ● |   217 |    239 |
+|       40 then 17       |     ● |   223 |     ● |     ● |     ● |               ● |     ● |     ● |   218 |    197 |
+|       40 then 18       |     ● |   253 |     ● |     ● |     ● |               ● |   248 |   237 |     ● |      ● |
+|       40 then 19       |     ● |   251 |     ● |     ● |     ● |               ● |   238 |   210 |     ● |      ● |
